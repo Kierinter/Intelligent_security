@@ -13,25 +13,25 @@ CMake Error at D:/Jetbrains/apps/CLion/ch-0/231.9225.21/bin/cmake/win/x64/share/
 
   It fails with the following output:
 
-    Change Dir: //wsl$/Ubuntu-22.04/home/kevin/Project/Intelligent_security/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qhar6d
+    Change Dir: //wsl$/Ubuntu-22.04/home/kevin/Project/Intelligent_security/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ssd3gx
     
-    Run Build Command(s):D:/stm32cube/MinGW/bin/mingw32-make.exe -f Makefile cmTC_c8d4c/fast && D:/stm32cube/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_c8d4c.dir\build.make CMakeFiles/cmTC_c8d4c.dir/build
-    mingw32-make.exe[1]: Entering directory '//wsl$/Ubuntu-22.04/home/kevin/Project/Intelligent_security/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qhar6d'
-    '\\wsl$\Ubuntu-22.04\home\kevin\Project\Intelligent_security\cmake-build-debug\CMakeFiles\CMakeScratch\TryCompile-qhar6d'
+    Run Build Command(s):D:/stm32cube/MinGW/bin/mingw32-make.exe -f Makefile cmTC_beacc/fast && D:/stm32cube/MinGW/bin/mingw32-make.exe  -f CMakeFiles\cmTC_beacc.dir\build.make CMakeFiles/cmTC_beacc.dir/build
+    mingw32-make.exe[1]: Entering directory '//wsl$/Ubuntu-22.04/home/kevin/Project/Intelligent_security/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ssd3gx'
+    '\\wsl$\Ubuntu-22.04\home\kevin\Project\Intelligent_security\cmake-build-debug\CMakeFiles\CMakeScratch\TryCompile-ssd3gx'
     用作为当前目录的以上路径启动了 CMD.EXE。
     UNC 路径不受支持。默认值设为 Windows 目录。
-    Building C object CMakeFiles/cmTC_c8d4c.dir/testCCompiler.c.obj
-    D:\stm32cube\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe   -fdiagnostics-color=always -o CMakeFiles\cmTC_c8d4c.dir\testCCompiler.c.obj -c "\\wsl$\Ubuntu-22.04\home\kevin\Project\Intelligent_security\cmake-build-debug\CMakeFiles\CMakeScratch\TryCompile-qhar6d\testCCompiler.c"
-    '\\wsl$\Ubuntu-22.04\home\kevin\Project\Intelligent_security\cmake-build-debug\CMakeFiles\CMakeScratch\TryCompile-qhar6d'
+    Building C object CMakeFiles/cmTC_beacc.dir/testCCompiler.c.obj
+    D:\stm32cube\gcc-arm-none-eabi-10.3-2021.10\bin\arm-none-eabi-gcc.exe   -fdiagnostics-color=always -o CMakeFiles\cmTC_beacc.dir\testCCompiler.c.obj -c "\\wsl$\Ubuntu-22.04\home\kevin\Project\Intelligent_security\cmake-build-debug\CMakeFiles\CMakeScratch\TryCompile-ssd3gx\testCCompiler.c"
+    '\\wsl$\Ubuntu-22.04\home\kevin\Project\Intelligent_security\cmake-build-debug\CMakeFiles\CMakeScratch\TryCompile-ssd3gx'
     用作为当前目录的以上路径启动了 CMD.EXE。
     UNC 路径不受支持。默认值设为 Windows 目录。
     Assembler messages:
-    Fatal error: can't create CMakeFiles\cmTC_c8d4c.dir\testCCompiler.c.obj: No such file or directory
-    CMakeFiles\cmTC_c8d4c.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_c8d4c.dir/testCCompiler.c.obj' failed
-    mingw32-make.exe[1]: *** [CMakeFiles/cmTC_c8d4c.dir/testCCompiler.c.obj] Error 1
-    mingw32-make.exe[1]: Leaving directory '//wsl$/Ubuntu-22.04/home/kevin/Project/Intelligent_security/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-qhar6d'
-    Makefile:126: recipe for target 'cmTC_c8d4c/fast' failed
-    mingw32-make.exe: *** [cmTC_c8d4c/fast] Error 2
+    Fatal error: can't create CMakeFiles\cmTC_beacc.dir\testCCompiler.c.obj: No such file or directory
+    CMakeFiles\cmTC_beacc.dir\build.make:76: recipe for target 'CMakeFiles/cmTC_beacc.dir/testCCompiler.c.obj' failed
+    mingw32-make.exe[1]: *** [CMakeFiles/cmTC_beacc.dir/testCCompiler.c.obj] Error 1
+    mingw32-make.exe[1]: Leaving directory '//wsl$/Ubuntu-22.04/home/kevin/Project/Intelligent_security/cmake-build-debug/CMakeFiles/CMakeScratch/TryCompile-ssd3gx'
+    Makefile:126: recipe for target 'cmTC_beacc/fast' failed
+    mingw32-make.exe: *** [cmTC_beacc/fast] Error 2
     
     
 

@@ -11,7 +11,17 @@
 
 int main (int argc, char *argv[])
 {
-    printf("Hello World!\n");
-    return 0;
+
+    lcd_init();
+    int smoke = 0;
+    get_MQ2(&smoke);
+    printf("smoke = %d\n", smoke);
+    if (smoke > 100) {
+        led_beep_ctrl("/dev/led", 1);
+        led_beep_ctrl("/dev/beep", 1);
+    } else {
+        led_beep_ctrl("/dev/led", 0);
+        led_beep_ctrl("/dev/beep", 0);
+    }
 
 }

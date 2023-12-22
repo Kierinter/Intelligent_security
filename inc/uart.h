@@ -6,6 +6,7 @@
 #ifndef INTELLIGENT_SECURITY_UART_H
 #define INTELLIGENT_SECURITY_UART_H
 
+void init_serial(char *device, int baudrate);
 
 void get_MQ2(int *data);
 void led_beep_ctrl(char *device,int status);

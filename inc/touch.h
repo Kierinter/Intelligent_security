@@ -5,6 +5,6 @@
 #ifndef INTELLIGENT_SECURITY_TOUCH_H
 #define INTELLIGENT_SECURITY_TOUCH_H
 
-void get_coordinate(int *x,int*y);
+void get_coordinate(int *x, int *y);
 
 #endif //INTELLIGENT_SECURITY_TOUCH_H

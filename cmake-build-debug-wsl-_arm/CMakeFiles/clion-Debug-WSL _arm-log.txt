@@ -1,6 +1,0 @@
-C:\Windows\system32\wsl.exe --distribution Ubuntu-22.04 --exec /bin/bash -c "export CMAKE_COLOR_DIAGNOSTICS=ON && export CLION_IDE=TRUE && export JETBRAINS_IDE=TRUE && cd /home/kk/Project/Intelligent_security/cmake-build-debug-wsl-_arm && /usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/usr/bin/arm-linux-gnueabihf-gcc-11 -DCMAKE_CXX_COMPILER=/usr/bin/arm-linux-gnueabihf-gcc-11 -G 'CodeBlocks - Unix Makefiles' -S /home/kk/Project/Intelligent_security -B /home/kk/Project/Intelligent_security/cmake-build-debug-wsl-_arm"
-CMake Error at CMakeLists.txt:3:
-  Parse error.  Expected "(", got unquoted argument with text "=".
-
-
--- Configuring incomplete, errors occurred!

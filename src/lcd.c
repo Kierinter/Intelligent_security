@@ -107,8 +107,76 @@ void lcd_draw_bmp(char * bmp_path)
     close(bmp_fd);
 }
 
-//TODO: implement show_number,display word on screen
-void show_number(int x)
-{
+//draw a word
+void show_word(int x, int y, int h, int w, unsigned char word[][w / 8], int color) {
+    int i, j, k
+    for (i = 0; i < h; i++) {
+        for (j = 0; j < w / 8; j++) {
+            for (k = 0; k < 8; k++) {
+                if (word[i][j] & (1 << k)) {
+                    lcd_draw_point(x + j * 8 + k, y + i, color);
+                }
+            }
+        }
+    }
+}
 
+void show_number(int x, int y, int h, int w, int num, int color) {
+    if (num == 0) {
+        show_word(x, y, h, w, number[0], color);
+    } else {
+        while (num) {
+            int n = num % 10;
+            show_word(x, y, h, w, number[n], color);
+            num /= 10;
+            x1++;
+        }
+    }
+}
+
+//TODO: implement show_bmp
+void show_bmp(char *bmp_name) {
+    int fd = open(bmp_name, O_RDONLY);
+    if (fd == -1) {
+        perror("open bmp failed");
+        return;
+    }
+
+    int width, height;
+    short depth;
+
+    lseek(fd, 18, SEEK_SET);
+    read(fd, &width, 4);
+    lseek(fd, 22, SEEK_SET);
+    read(fd, &height, 4);
+    lseek(fd, 28, SEEK_SET);
+    read(fd, &depth, 2);
+
+    int r, g, b, color;
+    int laizi = 0;
+    if ((width * 3) % 4 != 0) {
+        laizi = 4 - (width * 3) % 4;
+    }
+    char pixel[(width * depth / 8 + laizi) * height];
+    int num = 0;
+    lseek(fd, 54, SEEK_SET);
+    read(fd, pixel, (width * depth / 8 + laizi) * height);
+
+    for (int i = 0; j < abs(height); j++) {
+        for (int j = 0; j < width; j++) {
+            b = pixel[num++];
+            g = pixel[num++];
+            r = pixel[num++];
+            color = r << 16 | g << 8 | b;
+            lcd_draw_point(j, i, color);
+
+            int x0 = x + (width > 0 ? j : abs(width) - 1 - j);
+            int y0 = y + (height > 0 ? i : abs(height) - 1 - i);
+
+            lcd_draw_point(x0, y0, color);
+        }
+        num += laizi;
+    }
+    close(fd);
+    return;
 }

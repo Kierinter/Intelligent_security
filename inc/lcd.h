@@ -73,7 +73,10 @@ void lcd_close(void);
 void lcd_draw_point(int x, int y, int color);
 void lcd_draw_color(int color);
 
-//void show_word(int x, int y, int h, int w, unsigned char word[][w / 8], int color);
+void lcd_show_bmp(char *bmp_name);
+
+void show_word(int x, int y, int h, int w, unsigned char word[][w / 8], int color);
+
 void show_number(int x, int y, int h, int w, int num, int color);
 
 #endif //INTELLIGENT_SECURITY_LCD_H

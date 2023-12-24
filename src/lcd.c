@@ -134,7 +134,6 @@ void show_number(int x, int y, int h, int w, int num, int color) {
     }
 }
 
-//TODO: implement show_bmp
 void show_bmp(char *bmp_name) {
     int fd = open(bmp_name, O_RDONLY);
     if (fd == -1) {
